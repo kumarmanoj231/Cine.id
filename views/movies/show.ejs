@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cine.id</title>
+</head>
+<body>
+    <div style="padding: 2rem;">
+        <h3><%= movie.title %> </h3>   
+        <h3><%= movie.releaseYear %></h3>
+        <h3><%= movie.genre %></h3>
+        <h3><%= movie.director %></h3>
+        <h3><%= movie.cast %></h3>
+        <h3><%= movie.duration %></h3>
+        <h3>⭐ <%= movie.rating %></h3>
+        <h3><%= movie.synopsis %></h3>
+        <img src="<%= movie.posterUrl%>" alt="<%= movie.title %> " height="200px">
+        <br><br>
+        <a href="/movies/<%=movie._id %>/edit">Edit</a>
+        <br><br>
+        <form action="/movies/<%=movie._id %>?_method=DELETE" method="POST">
+            <button type="submit">Delete</button>
+        </form>
+    </div>
+</body>
+</html>
