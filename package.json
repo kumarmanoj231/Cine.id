@@ -1,0 +1,19 @@
+{
+  "name": "cine.id",
+  "version": "1.0.0",
+  "description": "A dynamic movie application built with the MERN stack to provide a seamless and engaging movie-browsing experience.⭐",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "ejs": "^3.1.10",
+    "ejs-mate": "^4.0.0",
+    "express": "^4.21.2",
+    "mongoose": "^8.9.5"
+  }
+}
