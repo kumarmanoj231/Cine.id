@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Cine.id - Your Ultimate Movie Companion</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .animate-fade-in {
+        animation: fadeIn 0.5s ease-out forwards;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100 dark:bg-gray-900 min-h-screen">
+    <!-- Navbar -->
+    <nav class="fixed w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border-b border-gray-200 dark:border-gray-800 z-50">
+      <div class="container mx-auto px-4 h-16 flex items-center justify-between">
+        <div class="flex items-center space-x-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600 dark:text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z" />
+          </svg>
+          <span class="text-xl font-bold text-gray-900 dark:text-white">Cine.id</span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 pt-24 pb-12">
+      <div class="max-w-4xl mx-auto">
+        <!-- Header Section -->
+        <h1 class="text-5xl font-bold mb-6 text-gray-900 dark:text-white animate-fade-in text-center">
+          About Cine.id
+        </h1>
+
+        <!-- Hero Image -->
+        <div class="relative mb-12 animate-fade-in">
+          <img 
+            src="https://wallpapercave.com/uwp/uwp4311830.png" 
+            alt="Hero Image" 
+            class="w-full h-72 object-cover rounded-xl shadow-lg">
+          <div class="absolute inset-0 bg-black bg-opacity-40 rounded-xl flex items-center justify-center">
+            <h2 class="text-4xl font-semibold text-white">Your Gateway to the World of Cinema</h2>
+          </div>
+        </div>
+
+        <!-- About Section -->
+        <div class="prose prose-lg dark:prose-invert max-w-none animate-fade-in">
+          <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg mb-8">
+            <h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
+              Your Ultimate Movie Companion
+            </h2>
+            <p class="text-gray-600 dark:text-gray-300 mb-6">
+              Cine.id is your go-to destination for discovering, exploring, and tracking the world of cinema. We provide a curated experience for movie enthusiasts, offering comprehensive information about films from every era and genre.
+            </p>
+
+            <!-- Statistics Section -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+              <a href="/movies">
+              <div class="text-center p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                <img src="https://source.unsplash.com/100x100/?movies" alt="Movies" class="mx-auto mb-2 rounded-full">
+                <div class="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">10K+</div>
+                <div class="text-sm text-gray-600 dark:text-gray-300">Movies</div>
+              </div>
+            </a>
+              <div class="text-center p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                <img src="https://source.unsplash.com/100x100/?people" alt="Users" class="mx-auto mb-2 rounded-full">
+                <div class="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">50K+</div>
+                <div class="text-sm text-gray-600 dark:text-gray-300">Active Users</div>
+              </div>
+              <div class="text-center p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                <img src="https://source.unsplash.com/100x100/?reviews" alt="Reviews" class="mx-auto mb-2 rounded-full">
+                <div class="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">100K+</div>
+                <div class="text-sm text-gray-600 dark:text-gray-300">Reviews</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Features Section -->
+          <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg mb-8">
+            <h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
+              Features
+            </h2>
+            <div class="grid gap-4">
+              <div class="flex items-start space-x-4">
+                <img src="https://source.unsplash.com/80x80/?database" alt="Database" class="rounded-lg">
+                <div>
+                  <h3 class="font-semibold text-gray-900 dark:text-white">Comprehensive Movie Database</h3>
+                  <p class="text-gray-600 dark:text-gray-300">Access detailed information about thousands of movies, including cast, crew, ratings, and reviews.</p>
+                </div>
+              </div>
+              <div class="flex items-start space-x-4">
+                <img src="https://source.unsplash.com/80x80/?news" alt="Updates" class="rounded-lg">
+                <div>
+                  <h3 class="font-semibold text-gray-900 dark:text-white">Real-time Updates</h3>
+                  <p class="text-gray-600 dark:text-gray-300">Stay informed with the latest movie releases, news, and industry updates.</p>
+                </div>
+              </div>
+              <div class="flex items-start space-x-4">
+                <img src="https://source.unsplash.com/80x80/?community" alt="Community" class="rounded-lg">
+                <div>
+                  <h3 class="font-semibold text-gray-900 dark:text-white">Community Reviews</h3>
+                  <p class="text-gray-600 dark:text-gray-300">Share your thoughts and read reviews from our vibrant community of movie enthusiasts.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Call to Action -->
+          <div class="bg-blue-600 dark:bg-blue-700 rounded-2xl p-8 shadow-lg text-white">
+            <h2 class="text-2xl font-semibold mb-4">Join Our Community</h2>
+            <p class="mb-6">Be part of the fastest-growing movie community. Share your passion for cinema with thousands of other movie lovers.</p>
+            <button class="bg-white text-blue-600 px-6 py-2 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
+              Sign Up Now
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

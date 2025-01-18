@@ -3,6 +3,7 @@ const dotenv = require("dotenv");
 const ejs = require("ejs");
 const path = require("path");
 const methodOverride = require("method-override");
+const ejsMate = require("ejs-mate");
 
 const connectDB = require("./utils/db.js");
 
@@ -25,7 +26,9 @@ app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
 app.use(express.urlencoded({extended : true}));
+app.use(express.static(path.join(__dirname, "/public")));
 app.use(methodOverride("_method"));
+app.engine('ejs', ejsMate);
 
 
 app.listen(process.env.PORT, ()=>{
@@ -33,7 +36,7 @@ app.listen(process.env.PORT, ()=>{
 });
 
 app.get('/',(req,res)=>{
-    res.send("root directory!");
+    res.render("index.ejs");
 });
 
 // Movie Routes

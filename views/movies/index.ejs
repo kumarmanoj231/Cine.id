@@ -1,19 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cine.id</title>
-</head>
+<% layout("/layouts/boilerplate") %>
 <body>
-    <h1>All Movies</h1>
-
-    <ul>
-        <%  allMovies.map((m)=>{ %>
-            <a href="/movies/<%= m._id %>">
-                <li> <%= m.title %></li>
-            </a>
-        <% }) %>
-    </ul>
+  <div class="flex flex-wrap items-center justify-center bg-[#5a2e7c] w-[96%] mx-auto rounded-b-lg" >
+    <% allMovies.map((m)=>{ %>
+        <a href="/movies/<%=m._id %>">
+            <div class="p-5  flex flex-col overflow-hidden w-[250px]">
+                <img src="<%= m.posterUrl %>" alt="" class="w-[250px] h-[200px] rounded-[1.5rem]">
+                <h3 class="font-semibold text-white"><%= m.title %></h3>
+                <p class="text-white text-[0.8rem]" >⭐ <%= m.rating %> | <%=m.releaseYear %></p>
+            </div>
+        </a>
+    
+    
+    <% }) %>
+</div>
 </body>
-</html>

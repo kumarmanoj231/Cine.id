@@ -4,7 +4,9 @@
   "description": "A dynamic movie application built with the MERN stack to provide a seamless and engaging movie-browsing experience.⭐",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "backend": "nodemon app.js",
+    "build:css": "npx tailwindcss -i ./public/css/styles.css -o ./public/css/output.css --watch",
+    "dev": "concurrently \"npm run backend\" \"npm run build:css\""
   },
   "keywords": [],
   "author": "",
@@ -14,7 +16,14 @@
     "ejs": "^3.1.10",
     "ejs-mate": "^4.0.0",
     "express": "^4.21.2",
+    "flowbite": "^2.5.2",
     "method-override": "^3.0.0",
     "mongoose": "^8.9.5"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "concurrently": "^9.1.2",
+    "postcss": "^8.5.1",
+    "tailwindcss": "^3.4.17"
   }
 }
