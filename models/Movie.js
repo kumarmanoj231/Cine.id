@@ -9,10 +9,10 @@ const movieSchema = mongoose.Schema({
     type: Number,
     required: true,
   },
-  genres: {
+  genre: {
     type: [{ type: String, required: true }],
   },
-  directors: {
+  director: {
     type: [
       {
         type: String,

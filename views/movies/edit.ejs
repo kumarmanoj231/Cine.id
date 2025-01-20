@@ -1,6 +1,57 @@
 <% layout("/layouts/boilerplate") %>
 
 <body>
+    <div class="W-[96%] flex flex-col">
+        <form action="/movies/<%= movie._id%>?_method=PUT" class="w-[70%] mx-auto" method="POST">
+            <h1 class="text-center font-bold font-serif p-5">Edit Movie Details</h1>
+            <div class="w-[90%] my-5 flex items-center justify-between">
+                <input type="text" id="base-input" class="block  p-3 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 w-[60%]"
+                placeholder="Enter title" name="movie[title]" value="<%= movie.title %>" required>
+
+                <input type="number" id="base-input" class="block w-[30%] p-3 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 "
+                placeholder="Enter year" min="1900" name="movie[year]" value="<%= movie.year %>" required>
+                
+
+            </div>
+
+            <div class="w-[90%] my-5 flex items-center justify-between">
+                <input type="text" id="base-input" class="block  p-3 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 w-[60%]"
+                placeholder="Enter genres" name="movie[genre] " value="<%= movie.genre %>" required>
+
+                <input type="number" id="base-input" class="block w-[30%] p-3 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 "
+                placeholder="duration" min="0" name="movie[duration]" value="<%= movie.duration %>" required>
+                
+
+            </div>
+
+            <div class="w-[90%] my-5 flex items-center justify-between">
+                <input type="text" id="base-input" class="block  p-3 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 w-[48%]"
+                placeholder="Cast" name="movie[cast]" value="<%= movie.cast %>" required>
+
+                <input type="text" id="base-input" class="block  p-3 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 w-[48%]"
+                placeholder="director" name="movie[director]" value="<%= movie.director %>" required>
+                
+
+            </div>
+
+            <div class="w-[90%] my-5 flex items-center justify-between">
+                <input type="url" id="base-input" class="block  p-3 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 w-[60%]"
+                placeholder="Image url" name="movie[url]" value="<%= movie.url %>" required>
+
+                <input type="number" id="base-input" class="block w-[30%] p-3 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 "
+                placeholder="Rating"  min="0" name="movie[rating]" value="<%= movie.rating %>" required>
+                
+
+            </div>
+            <div class="w-[90%] my-5 flex items-center justify-between">
+                <textarea id="message" rows="4" class="block p-3.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Enter description..." name="movie[synopsis]" required><%= movie.synopsis %></textarea>
+
+            </div>
+            <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Edit </button>
+
+        </form>
+
+    </div>
     
 </body>
 
